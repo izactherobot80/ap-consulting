@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link
+      rel="icon"
+      href="img/favicon-48x48.png"
+      type="image/png"
+      sizes="48x48"
+    />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AP Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="pre"><span>Loading</span><b id="count">0</b></div>
+
+    <header>
+      <a class="logo" href="#"
+        ><img src="img/ap-logo-white-sm.svg" alt="AP Consulting"
+      /></a>
+      <button id="menuBtn" aria-expanded="false">Menu</button>
+    </header>
+
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!--<small>hello@example.com &nbsp; +31 000 000 000</small>-->
+    </nav>
+
+    <div id="site">
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="hero-imgs" id="heroImgs"></div>
+          <div class="hero-in">
+            <h1 data-split data-hero>Rediscover Who You Are</h1>
+            <div class="hero-row">
+              <p data-fade>
+                When your brand no longer reflects who you've become, growth can
+                feel harder than it should. I help businesses uncover the truth
+                at the heart of their organization and transform it into a
+                clear, compelling identity. The result is a brand that feels
+                authentic, confident, and aligned with your future. Because the
+                strongest brands aren't created from scratch, they're
+                revealed.<br /><br />
+                I can help you rediscover your true brand - let’s connect today
+              </p>
+              <a class="btn" data-fade href="#contact">Let's Connect</a>
+            </div>
+          </div>
+          <span class="scroll-hint" data-fade>Scroll to explore</span>
+        </section>
+
+        <!-- EXPAND 1 -->
+        <section class="expand" data-expand>
+          <div class="box">
+            <img
+              decoding="async"
+              src="img/droplet.jpg"
+              alt="A droplet of water falling into a pool, creating ripples"
+            />
+          </div>
+          <h2 class="cap">Relationship Driven</h2>
+        </section>
+
+        <!-- FEATURED -->
+        <section class="feat" id="work">
+          <div class="feat-head">
+            <h2 data-split data-scroll>Featured Brands</h2>
+            <p data-split data-scroll>
+              Brands I’ve been a part of recreating their story.
+            </p>
+          </div>
+          <div class="grid">
+            <div class="card" href="#">
+              <div class="media">
+                <img
+                  decoding="async"
+                  data-parallax
+                  src="img/nutmeg-thumb.jpg"
+                  alt="Play video"
+                  tabindex="0"
+                  role="button"
+                  data-video-popup="ojzOmp957-8"
+                />
+              </div>
+              <h3 data-split>Nutmeg State Financial Credit&nbsp;Union</h3>
+              <!--<p data-split>Seamless Photographic Journey</p>-->
+            </div>
+            <div class="card" href="#">
+              <div class="media">
+                <img
+                  decoding="async"
+                  data-parallax
+                  src="img/txtav.jpg"
+                  alt="Textron Aviation"
+                />
+              </div>
+              <h3 data-split>Textron Aviation</h3>
+              <!--<p data-split>Frontier Health Innovation</p>-->
+            </div>
+            <div class="card" href="#">
+              <div class="media">
+                <img
+                  decoding="async"
+                  data-parallax
+                  src="img/meritrust.jpg"
+                  alt="Meritrust Financial Credit Union"
+                />
+              </div>
+              <h3 data-split>Meritrust Financial Credit&nbsp;Union</h3>
+              <!--<p data-split>Celebrating a Century of Cinema</p>-->
+            </div>
+            <div class="card" href="#">
+              <div class="media">
+                <img
+                  decoding="async"
+                  data-parallax
+                  src="img/midwest-battle-buddies.jpg"
+                  alt="Midwest Battle Buddies"
+                />
+              </div>
+              <h3 data-split>Midwest Battle Buddies</h3>
+              <!--<p data-split>Pioneering Sustainable Solutions</p>-->
+            </div>
+          </div>
+          <!--<div class="more"><a class="btn" href="#">Browse all work</a></div>-->
+        </section>
+
+        <!-- EXPAND 2 / REEL -->
+        <!--<section class="expand" id="reel" data-expand>
+          <div class="box">
+            <img
+              decoding="async"
+              src="https://a.storyblok.com/f/133769/2400x2990/3e8f8d08f7/aebele-interiors-hero.jpg/m/1920x0/filters:quality%2880%29"
+              alt="Play reel"
+            />
+          </div>
+          <h2 class="cap">Play Reel</h2>
+        </section>-->
+
+        <!-- NEWS (horizontal scroll) -->
+        <!--<section class="news" id="news">
+          <div class="news-head">
+            <h2 data-split data-scroll>Spread the News</h2>
+            <a class="btn" href="#">Browse all news</a>
+          </div>
+          <div class="track" id="track">
+            <figure>
+              <img decoding="async" src="" alt="" />
+            </figure>
+            <figure>
+              <img decoding="async" src="" alt="" />
+            </figure>
+            <figure>
+              <img decoding="async" src="" alt="" />
+            </figure>
+            <figure>
+              <img decoding="async" src="" alt="" />
+            </figure>
+            <figure>
+              <img decoding="async" src="" alt="" />
+            </figure>
+          </div>
+        </section>-->
+
+        <section class="story-sec" id="story">
+          <h2 class="s-our">My</h2>
+          <div class="s-copy">
+            <p>
+              I believe every business deserves a brand that truly reflects its
+              purpose. When companies struggle to define who they are, they
+              often struggle to connect, grow, and stand out. I help uncover the
+              identity that's already there and bring it to life through
+              strategy, storytelling, and design. Together, we'll create a brand
+              that feels authentic, meaningful, and impossible to ignore.
+              Because when your brand aligns with your purpose, everything
+              becomes clearer.
+            </p>
+            <!--<a class="btn" href="#">Read our story</a>-->
+          </div>
+          <h2 class="s-story">Story</h2>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="contact-grid">
+            <div class="contact-intro">
+              <h2 data-split>Let’s build something together</h2>
+              <p data-split>
+                Taking the next steps starts with taking the first step, let’s
+                connect.
+              </p>
+              <!--<ul>
+                <li>
+                  <a href="mailto:hello@example.com">hello@example.com</a>
+                </li>
+                <li>+31 000 000 000</li>
+              </ul>-->
+            </div>
+
+            <!-- Set data-endpoint to your form backend URL (Formspree, Netlify, your own API...) -->
+            <form class="form" id="contactForm" data-endpoint="">
+              <div role="group" aria-labelledby="typesLbl">
+                <span class="lbl" id="typesLbl">What do you need?</span>
+                <div class="pills">
+                  <label class="pill"
+                    ><input
+                      type="radio"
+                      name="type"
+                      value="Website"
+                      checked
+                    /><span>Website</span></label
+                  >
+                  <label class="pill"
+                    ><input type="radio" name="type" value="Brand" /><span
+                      >Brand identity</span
+                    ></label
+                  >
+                  <label class="pill"
+                    ><input type="radio" name="type" value="Product" /><span
+                      >Digital product</span
+                    ></label
+                  >
+                  <label class="pill"
+                    ><input type="radio" name="type" value="Other" /><span
+                      >Something else</span
+                    ></label
+                  >
+                </div>
+              </div>
+              <div class="field">
+                <label for="f-name">Your name</label
+                ><input
+                  id="f-name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Jane Doe"
+                /><span class="rule"></span>
+              </div>
+              <div class="field">
+                <label for="f-email">Email address</label
+                ><input
+                  id="f-email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="jane@company.com"
+                /><span class="rule"></span>
+              </div>
+              <div class="field">
+                <label for="f-company">Company (optional)</label
+                ><input
+                  id="f-company"
+                  name="company"
+                  autocomplete="organization"
+                /><span class="rule"></span>
+              </div>
+              <div class="field">
+                <label for="f-msg">Tell us about the project</label
+                ><textarea
+                  id="f-msg"
+                  name="message"
+                  required
+                  placeholder="Goals, timeline, budget range..."
+                ></textarea
+                ><span class="rule"></span>
+              </div>
+              <input
+                class="hp"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+              <div class="form-foot">
+                <button class="btn" type="submit">Send message</button>
+                <p id="formStatus" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="foot">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            AP Consulting. All rights reserved.
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            AP Consulting helps rediscover your story and create a brand
+            consumers remember and trust.
+          </p>
+          <!--<ul>
+            <li>Willem II Singel 8</li>
+            <li>Roermond, The Netherlands</li>
+            <li>hello@example.com</li>
+          </ul>-->
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <!--<ul>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">Dribbble</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>-->
+        </div>
+      </footer>
+    </div>
+    <!--VIDEO POPUP-->
+    <div
+      class="vp-overlay"
+      id="vpOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Video player"
+      hidden
+    >
+      <div class="vp-box">
+        <button class="vp-close" type="button" aria-label="Close video">
+          &times;
+        </button>
+        <div id="vpFrame"></div>
+      </div>
+    </div>
+  </body>
+</html>
