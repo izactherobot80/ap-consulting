@@ -74,7 +74,7 @@ addEventListener("pageshow", (e) => {
   const heroBox = document.getElementById("heroImgs");
   const heroImgs = heroSrc.map((s) => {
     img = new Image();
-    img.src = `../img/${s}.jpg`;
+    img.src = `https://github.com/izactherobot80/ap-consulting/blob/main/img/${s}.jpg`;
     img.alt = "";
     img.decoding = "async";
     heroBox.appendChild(img);
