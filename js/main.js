@@ -144,6 +144,7 @@ addEventListener("pageshow", (e) => {
       ease: "power2.inOut",
       onUpdate: () => (count.textContent = Math.round(counter.v)),
     })
+    .set("#site", { opacity: 1 })
     .to(".pre b", { scale: 0.92, duration: 0.5, ease: "power2.in" })
     .to(
       "#site",

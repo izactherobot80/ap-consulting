@@ -94,6 +94,7 @@ h3 {
   position: relative;
   background: var(--bg);
   z-index: 5;
+  opacity: 0;
 }
 header {
   opacity: 0;
