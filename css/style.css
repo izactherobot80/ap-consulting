@@ -207,7 +207,7 @@ header .logo {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(13, 14, 19, 0.95),
+    rgba(13, 14, 19, 0.9),
     rgba(13, 14, 19, 1)
   );
   z-index: 99;
