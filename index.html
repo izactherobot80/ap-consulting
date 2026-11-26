@@ -26,7 +26,13 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
-    <div class="pre"><span>Loading</span><b id="count">0</b></div>
+    <div class="pre">
+      <img
+        class="pre-logo"
+        src="img/ap-logo-black.svg"
+        alt="AP Consulting"
+      /><span>Loading</span><b id="count">0</b>
+    </div>
 
     <header>
       <a class="logo" href="#"
@@ -48,7 +54,21 @@
       <main>
         <!-- HERO -->
         <section class="hero">
-          <div class="hero-imgs" id="heroImgs"></div>
+          <div class="hero-imgs" id="heroImgs">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              poster="img/ap-01.jpg"
+            >
+              <source
+                src="img/ap-consulting-header-video.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
           <div class="hero-in">
             <h1 data-split data-hero>Rediscover Who You Are</h1>
             <div class="hero-row">

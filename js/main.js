@@ -69,41 +69,10 @@ addEventListener("pageshow", (e) => {
   });
   gsap.set("[data-fade]", { autoAlpha: 0, y: 24 });
 
-  /* ---------- hero image stack ---------- */
-  const heroSrc = ["ap-01", "ap-02", "ap-03"];
+  /* ---------- hero video ---------- */
   const heroBox = document.getElementById("heroImgs");
-  const heroImgs = heroSrc.map((s) => {
-    img = new Image();
-    img.src = `/ap-consulting/img/${s}.jpg`;
-    img.alt = "";
-    img.decoding = "async";
-    heroBox.appendChild(img);
-    return img;
-  });
-  let zTop = 1;
-  gsap.set(heroImgs, { autoAlpha: 0 });
-  gsap.set(heroImgs[0], { autoAlpha: 1 });
-  function cycle(i) {
-    const next = heroImgs[(i + 1) % heroImgs.length];
-    gsap.fromTo(
-      next,
-      {
-        autoAlpha: 1,
-        zIndex: ++zTop,
-        clipPath: "inset(100% 0% 0% 0%)",
-        scale: 1.2,
-      },
-      {
-        clipPath: "inset(0% 0% 0% 0%)",
-        scale: 1,
-        duration: 1.4,
-        ease: "expo.inOut",
-        delay: 2.4,
-        onComplete: () => cycle(i + 1),
-      },
-    );
-  }
-  cycle(0);
+  const heroVideo = heroBox.querySelector("video");
+
   gsap.to(".hero-in", {
     yPercent: -12,
     ease: "none",
@@ -123,6 +92,14 @@ addEventListener("pageshow", (e) => {
       end: "bottom top",
       scrub: true,
     },
+  });
+
+  ScrollTrigger.create({
+    trigger: ".hero",
+    start: "top top",
+    end: "bottom top",
+    onLeave: () => heroVideo.pause(),
+    onEnterBack: () => heroVideo.play(),
   });
 
   /* ---------- preloader -> intro (site slides up from bottom) ---------- */
@@ -146,6 +123,7 @@ addEventListener("pageshow", (e) => {
     })
     .set("#site", { opacity: 1 })
     .to(".pre b", { scale: 0.92, duration: 0.5, ease: "power2.in" })
+    .to(".pre-logo", { autoAlpha: 0, duration: 0.5, ease: "power2.in" }, "<")
     .to(
       "#site",
       {
@@ -158,7 +136,7 @@ addEventListener("pageshow", (e) => {
     )
     .to(".pre", { yPercent: -20, duration: 1.6, ease: "expo.inOut" }, "<")
     .fromTo(
-      heroImgs[0],
+      heroVideo,
       { scale: 1.35 },
       { scale: 1, duration: 2, ease: "expo.out" },
       "<.25",
